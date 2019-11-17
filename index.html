@@ -57,31 +57,8 @@
 
 
     <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
-    <script>
-        // Initialize Firebase
-        var config = {
-        };
-        firebase.initializeApp(config);
-
-        const auth = firebase.auth();
-        const db = firebase.firestore();
-        // update firestore settings
-        db.settings({
-            timestampsInSnapshots: true
-        });
-        // Get the modal
-        var modal = document.getElementById('modal-signup');
-
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-
-    </script>
+    <script src="js/base.js"></script>
     <script src="index.js"></script>
-    <script src="index-kopia.js"></script>
     <script src="auth.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
