@@ -11,6 +11,7 @@
     function Messages($firebaseArray) {
         return function() {
             var config = {
+
             }; //set to your app url on firebase.com
             firebase.initializeApp(config);
             var rootRef = firebase.database().ref();
