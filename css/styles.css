@@ -1,3 +1,7 @@
+body {
+    background-color: #4CAF50;
+}
+
 .r {
     background-color: #3F51B5;
 }
@@ -50,4 +54,16 @@ textarea.materialize-textarea {
 p {
     color: #4CAF50;
     margin-left: 15px;
+}
+
+#row {
+    background-color: #3F51B5;
+    padding: 25px;
+    width: 100%;
+    min-width: 100%;
+}
+
+#s6 {
+    font-weight: bold;
+    font-size: 2rem;
 }
