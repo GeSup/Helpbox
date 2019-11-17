@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html lang="pl">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
     <title>HelpBox version 1.0</title>
     <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css" />
@@ -19,6 +14,7 @@
         <input type="email" placeholder="Email..." id="email_field" />
         <input type="password" placeholder="Password..." id="password_field" />
         <button onclick="login()">Login</button>
+        <a class="register" onclick="document.getElementById('modal-signup').style.display='block'" style="width:auto;">Don't have account? Register now!</a>
     </div>
 
     <div id="user_div" class="loggedin-div">
@@ -28,10 +24,45 @@
     </div>
 
 
+    <div id="modal-signup" class="modal">
+        <span onclick="document.getElementById('modal-signup').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <form id="signup-form" class="modal-content">
+            <div class="container">
+                <h1>Sign up</h1>
+                <p>Please fill in this form to create an account.</p>
+                <hr>
+                <label for="signup-email"><b>Email</b></label>
+                <input type="email" class="pass2" id="signup-email" placeholder="Enter Email" name="email" required>
+
+                <label for="signup-password"><b>Password</b></label>
+                <input type="password" class="pass2" id="signup-password" placeholder="Enter Password" name="psw" required>
+
+                <label for="psw-repeat"><b>Repeat Password</b></label>
+                <input type="password" class="pass2" placeholder="Repeat Password" name="psw-repeat" required>
+
+                <label>
+                    <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+                </label>
+
+                <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+                <div class="clearfix">
+                    <button type="button" onclick="document.getElementById('modal-signup').style.display='none'" class="cancelbtn">Cancel</button>
+                    <button type="submit" class="signupbtn">Sign Up</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+
     <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
     <script src="js/base.js"></script>
     <script src="js/index.js"></script>
 
+    <script src="index.js"></script>
+    <script src="auth.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 
 </html>
