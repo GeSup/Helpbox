@@ -11,12 +11,8 @@
  };
  firebase.initializeApp(config);
  const auth = firebase.auth();
- const db = firebase.firestore();
+ const db = firebase.database();
 
- // update firestore settings
- db.settings({
-     timestampsInSnapshots: true
- });
  // Get the modal
  var modal = document.getElementById('modal-signup');
 
