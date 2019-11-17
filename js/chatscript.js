@@ -25,8 +25,6 @@
             var rootRef = firebase.database().ref();
 
             return $firebaseArray(rootRef);
-            //var ref = new Firebase('https://chatbot-ad582.firebaseio.com');
-            //return $firebaseArray(ref);
         }
     }
 
