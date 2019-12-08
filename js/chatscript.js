@@ -11,7 +11,7 @@
     function Messages($firebaseArray) {
         return function() {
 
-            var rootRef = firebase.database().ref();
+            var rootRef = firebase.database().ref('room');
 
             return $firebaseArray(rootRef);
         }
