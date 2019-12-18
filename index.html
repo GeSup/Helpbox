@@ -18,26 +18,26 @@
 
 </head>
 
-<body>
+<body ng-app="helpbox">
 
     <div id="login_div" class="main-div">
         <h3>Helpbox</h3>
-        <img src="costumer.png" alt="customer" class="costumer" width="150" height="120">
+        <img src="costumer.png" alt="customer" class="costumer">
         <input type="email" placeholder="Email..." id="email_field" />
         <input type="password" placeholder="Password..." id="password_field" />
-        <button onclick="login()">Login</button>
-        <a class="register" onclick="document.getElementById('modal-signup').style.display='block'" style="width:auto;">Don't have account? Register now!</a>
+        <button id="login">Login</button>
+        <a id="register">Don't have account? Register now!</a>
     </div>
 
     <div id="user_div" class="loggedin-div">
         <h3>Welcome User</h3>
         <p id="user_para"></p>
-        <button onclick="logout()">Logout</button>
+        <button id="logout">Logout</button>
     </div>
 
 
     <div id="modal-signup" class="modal">
-        <span onclick="document.getElementById('modal-signup').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <span class="close cancelbtn" title="Close Modal">&times;</span>
         <form id="signup-form" class="modal-content">
             <div class="container">
                 <h1>Sign up</h1>
@@ -52,13 +52,13 @@
                 <label for="psw-repeat"><b>Repeat Password</b></label>
                 <input type="password" class="pass2" id="confirm_password" placeholder="Repeat Password" name="psw-repeat" required>
                 <label>
-                    <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+                    <input type="checkbox" checked="checked" name="remember" > Remember me
                 </label>
 
-                <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+                <p>By creating an account you agree to our <a href="#" id="terms">Terms & Privacy</a>.</p>
 
                 <div class="clearfix">
-                    <button type="button" onclick="document.getElementById('modal-signup').style.display='none'" class="cancelbtn">Cancel</button>
+                    <button type="button" id="cancelbtn" class="cancelbtn">Cancel</button>
                     <button type="submit" class="signupbtn">Sign Up</button>
                 </div>
             </div>
