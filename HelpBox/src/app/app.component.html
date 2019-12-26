@@ -1,2 +1,6 @@
-<app-login></app-login>
-<app-register></app-register>
+<div *ngIf='changeView'>
+    <app-login></app-login>
+
+    <a (click)="toggle()" id="register">Don't have account? Register now!</a>
+</div>
+<app-register *ngIf='!changeView' (onHide)="toggle()"></app-register>

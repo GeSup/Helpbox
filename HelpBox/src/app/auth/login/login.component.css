@@ -75,3 +75,8 @@ input[type="checkbox"] {
     border: 1px solid #5d8ffc;
     cursor: pointer;
 }
+
+.costumer {
+    width: 150px;
+    height: 120px;
+}
