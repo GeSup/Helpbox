@@ -6,13 +6,14 @@
             <p>Please fill in this form to create an account.</p>
             <hr>
             <label for="signup-email"><b>Email</b></label>
-            <input type="email" class="pass2" id="signup-email" placeholder="Enter Email" name="email" required>
+            <input type="email" class="pass2" id="signup-email" placeholder="Enter Email" [(ngModel)]="email" name="email" required>
 
             <label for="password"><b>Password</b></label>
-            <input type="password" class="pass2" id="password" placeholder="Enter Password" name="psw" required>
+            <input type="password" class="pass2" id="password" placeholder="Enter Password" [(ngModel)]="password" name="psw" required>
 
             <label for="psw-repeat"><b>Repeat Password</b></label>
-            <input type="password" class="pass2" id="confirm_password" placeholder="Repeat Password" name="psw-repeat" required>
+            <input type="password" class="pass2" id="confirm_password" placeholder="Repeat Password" [(ngModel)]="confirmPassword" name="psw-repeat" required>
+            <div id="checkMatch">{{dontMatch}} </div>
             <label>
                 <input type="checkbox" checked="checked" name="remember" > Remember me
             </label>
@@ -21,7 +22,7 @@
 
             <div class="clearfix">
                 <button (click)="setHide()" type="button" id="cancelbtn" class="cancelbtn">Cancel</button>
-                <button type="submit" class="signupbtn">Sign Up</button>
+                <button (click)="signUp()" type="submit" class="signupbtn">Sign Up</button>
             </div>
         </div>
     </form>

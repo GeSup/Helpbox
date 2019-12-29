@@ -1,7 +1,7 @@
 <div id="login_div" class="main-div">
     <h3>Helpbox</h3>
     <img src="../../../assets/costumer.png" alt="customer" class="costumer">
-    <input type="email" placeholder="Email..." id="email_field" />
-    <input type="password" placeholder="Password..." id="password_field" />
-    <button id="login">Login</button>
+    <input type="email" placeholder="Email..." id="email_field" [(ngModel)]="email" />
+    <input type="password" placeholder="Password..." id="password_field" [(ngModel)]="password" />
+    <button id="login" (click)="signIn()">Login</button>
 </div>
