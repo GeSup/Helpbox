@@ -1,5 +1,6 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { AuthService } from 'src/app/auth.service';
+import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/auth/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -8,9 +9,10 @@ import { AuthService } from 'src/app/auth.service';
 })
 export class RegisterComponent implements OnInit {
 
-  @Output() onHide = new EventEmitter<boolean>();
-
-  constructor(private authService:AuthService) { }
+  constructor(
+    private authService: AuthService,
+    private router: Router
+    ) { }
 
   ngOnInit() {
   }
@@ -20,7 +22,7 @@ export class RegisterComponent implements OnInit {
   dontMatch: string;
 
   setHide(){
-    this.onHide.emit(true);
+    this.router.navigate(['login']);
   }
 
   signUp() {
@@ -30,6 +32,7 @@ export class RegisterComponent implements OnInit {
     this.password = '';
     this.confirmPassword = '';
     this.dontMatch = '';
+    this.router.navigate(['chat']);
     } else {
       this.dontMatch = 'Passwords Don\'t Match';
     }

@@ -8,11 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent{
   
   title = 'HelpBox';
-  public changeView: boolean = true;
  
-  public toggle():void{ this.changeView = !this.changeView;}
 
-  changeHide(val: boolean) {
-    this.changeView = val;
-  }
+
 }

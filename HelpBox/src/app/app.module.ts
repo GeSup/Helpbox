@@ -7,16 +7,18 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { ClickOutsideModule } from 'ng-click-outside';
-import { AuthService } from './auth.service';
+import { AuthService } from './auth/auth.service';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from 'src/environments/environment';
+import { ChatComponent } from './chat/chat/chat.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    ChatComponent
   ],
   imports: [
     BrowserModule,
