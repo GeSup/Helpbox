@@ -1,0 +1,105 @@
+input:not([type]):not([readonly]):focus,
+input[type=text]:not([readonly]):focus,
+input[type=password]:not([readonly]):focus,
+input[type=email]:not([readonly]):focus,
+input[type=url]:not([readonly]):focus,
+input[type=time]:not([readonly]):focus,
+input[type=date]:not([readonly]):focus,
+input[type=datetime-local]:not([readonly]):focus,
+input[type=tel]:not([readonly]):focus,
+input[type=number]:not([readonly]):focus,
+input[type=search]:not([readonly]):focus,
+textarea:not([readonly]).materialize-textarea:focus {
+    background: #303F9F;
+    border-radius: 25px;
+    padding: 10px;
+}
+
+.input-field .prefix~input,
+.input-field .prefix~textarea {
+    margin-left: 4rem;
+}
+
+input:not([type]),
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=url],
+input[type=time],
+input[type=date],
+input[type=datetime-local],
+input[type=tel],
+input[type=number],
+input[type=search],
+textarea.materialize-textarea {
+    background-color: #303F9F;
+    border-radius: 15px;
+    padding: 10px 15px;
+    color: #C5CAE9;
+    width: 79%;
+}
+
+.input-field .prefix {
+    color: #4caf50;
+    font-size: 3em;
+}
+
+.message.from {
+    background: rgba(0, 0, 255, 0.5);
+    color: lightgreen;
+    text-align: right;
+    margin: 4px 5px 4px auto;
+    border-radius: 20px 20px 0px 20px;
+}
+
+.message {
+    background: rgba(144, 238, 144, 0.5);
+    color: blue;
+    border: 1px;
+    border-radius: 20px;
+    margin: 4px auto 4px 5px;
+    padding: 5px 15px;
+    width: max-content;
+    border-radius: 20px 20px 20px 0;
+    min-height: 20px;
+    min-width: 50px;
+}
+
+ng-container {
+    background: rgb(211, 204, 174);
+    overflow: auto;
+}
+
+.messages {
+    padding: 10px 50px;
+}
+
+.btn {
+    border-radius: 10px;
+    max-width: 150px;
+    min-width: 130px;
+    margin: 1px 0px 1px 5px;
+    padding: 10px;
+    vertical-align: middle;
+}
+
+#row {
+    background-color: #3F51B5;
+    padding: 10px 20px;
+    width: 90vw;
+    position: fixed;
+    bottom: 0px;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    margin-right: -50%;
+}
+
+.container {
+    display: flex;
+}
+
+#chat {
+    width: 95%;
+    height: 100vh;
+    margin: 0 auto;
+}

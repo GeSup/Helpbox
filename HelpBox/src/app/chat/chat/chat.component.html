@@ -1,1 +1,22 @@
-<p>chat works!</p>
+<div id="chat">
+    <div class="messages">
+        <ng-container *ngFor="let message of messages | async">
+
+            <div class="message" [ngClass]="{ 'from': message.sentBy==='bot' , 'to': message.sentBy===' user' }">
+
+                <div id="profile"> </div>
+                <div> {{ message.content }}</div>
+
+            </div>
+
+        </ng-container>
+    </div>
+    <div id="row">
+        <div class="container">
+            <input [(ngModel)]="formValue" (keyup.enter)="sendMessage()" type="text" placeholder="Wiadomość">
+
+            <button class="btn" [disabled]="!formValue" (click)="sendMessage()">Wyślij wiadomość</button>
+
+        </div>
+    </div>
+</div>
