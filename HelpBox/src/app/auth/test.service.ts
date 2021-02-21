@@ -1,3 +1,4 @@
+//can be deleted
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { CookieService } from 'ngx-cookie-service';
@@ -20,7 +21,7 @@ export class TestService {
      })
    }
 
-   public df_client_call(request){
+   public df_client_call(request, sessionId){
      var config = {
        headers: {
          'Authorization': "Bearer " + this.accessToken,
@@ -28,9 +29,18 @@ export class TestService {
        }
      };
      return this.http.post(
-       'http://dialogflow.googleapis.com/v2/projects/' + environment.project_id + '/agent/sessions' + this.cookieService.get('sessionId') + ':detectIntend',
+       'http://dialogflow.googleapis.com/v2/projects/' + environment.dialogflow.project_id + '/agent/sessions' + /*this.cookieService.get('sessionId')*/ sessionId + ':detectIntend',
        request,
        config
      )
    }
+
+  //  request = {
+  //   queryInput: {
+  //       text: {
+  //           text: action.payload.text,
+  //           languageCode: 'en-US',
+  //       },
+  //   }
+  // }
 }
