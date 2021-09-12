@@ -44,3 +44,7 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+/pan-opsik-gbdf-dialogflow-admin.json
+/process.env
+/dialogflowConfig.js
