@@ -2,3 +2,5 @@
 /HelpBox/pan-opsik-gbdf-dialogflow-admin.json
 /HelpBox/dialogflowConfig.js
 /HelpBox/process.env
+
+node_modules
