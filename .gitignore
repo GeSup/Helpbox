@@ -4,3 +4,4 @@
 /HelpBox/process.env
 
 node_modules
+.env
